@@ -11,6 +11,7 @@
   }
   header {
     font-size: 2rem;
+    
   }
   
   header,
@@ -24,6 +25,7 @@
   }
   form input{
     width: 60%;
+    outline:none;
   }
   form button{
     width: 10%
@@ -37,7 +39,7 @@
   }
   form button {
     color: #ff6f47;
-    background: #f7fffe;
+    background: #e6f3f1;
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -128,6 +130,7 @@
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     width: 12rem;
+    font-size: 1rem;
   }
   /* Arrow */
   .select::after {
@@ -146,34 +149,61 @@
     transform: scale(1.5);
   }
   */
-  @media (max-width: 750px){
+  @media (max-width: 1000px){
     form{
-      width:90%
+      min-height: 10vh;
+      width:80%;
+      flex-wrap: wrap;
     }
     header {
+      min-height: 10vh;
+      font-size: 1rem;
+    }
+    select{
+      width:20rem;
+    }
+  }
+  @media (max-width: 650px){
+    form{
+      margin-top: 5px;
+      width:90%;
+      flex-wrap: wrap;
+    }
+    form input{
+      width:80%;
+    }
+    header {
+      min-height: 6vh;
       font-size: 0.8rem;
+      width:100%;
+      background: rgb(11, 212, 162);
     }
     form input,
     form button {
       padding: 0.5rem;
-      font-size: 1rem;
-      border: none;
-      background: white;
+      font-size: 1.2rem;
     }
     .filter-todo {
       padding: 0.5rem;
     }
+    .select::after {
+      padding: 0.45rem;
+    }
+    .select{
+      width:50%;
+      margin:0.5rem;
+    }
+    select{
+      width:16rem;
+    }
+    .trash-btn, .complete-btn {
+      padding:0.5rem;
+    }
+    .todo{
+      font-size: 1.1rem;
+    }
   }
-  .select::after {
-    content: "\25BC";
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.45rem;
-    background: #ff6f47;
-    cursor: pointer;
-    pointer-events: none;
-  }
+  
 
   @media (max-width: 360px){
     form{
