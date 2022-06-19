@@ -15,10 +15,18 @@
   
   header,
   form {
+    width: 50%;
+    margin: 0 auto;
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  form input{
+    width: 60%;
+  }
+  form button{
+    width: 10%
   }
   form input,
   form button {
@@ -110,6 +118,7 @@
   
   /* Custom Select */
   .select {
+    width: 30%;
     margin: 1rem;
     position: relative;
     overflow: hidden;
@@ -137,4 +146,40 @@
     transform: scale(1.5);
   }
   */
-  
+  @media (max-width: 750px){
+    form{
+      width:90%
+    }
+    header {
+      font-size: 0.8rem;
+    }
+    form input,
+    form button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      background: white;
+    }
+    .filter-todo {
+      padding: 0.5rem;
+    }
+  }
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.45rem;
+    background: #ff6f47;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  @media (max-width: 360px){
+    form{
+      width: 95%
+    }
+    header {
+      font-size: 0.7rem;
+    }
+  }
